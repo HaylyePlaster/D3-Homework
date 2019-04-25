@@ -169,7 +169,7 @@ function visualize(theData) {
   // Call the toolTip 
   svg.call(toolTip);
 
-  // PART 2: D.R.Y!
+  // PART 2
   // ==============
   function xMinMax() {
     // min will grab the smallest 
@@ -196,7 +196,7 @@ function visualize(theData) {
     });
   }
 
-  // c. change the label text when clicked.
+  // Change the label text when clicked.
   function labelChange(axis, clickedText) {
     // Switch the currently active to inactive.
     d3
@@ -210,7 +210,7 @@ function visualize(theData) {
     clickedText.classed("inactive", false).classed("active", true);
   }
 
-  // Part 3: Instantiate the Scatter Plot
+  // Part 3: Scatter Plot
   // ====================================
   xMinMax();
   yMinMax();
@@ -287,7 +287,7 @@ function visualize(theData) {
  
   theCircles
     .append("text")
-    // We return the abbreviation to .text, which makes the text the abbreviation.
+    // Return the abbreviation to .text, which makes the text the abbreviation.
     .text(function(d) {
       return d.abbr;
     })
@@ -400,7 +400,7 @@ function visualize(theData) {
     }
   });
 
-  // Part 5: Mobile Responsive
+  // Part 5: Mobile Responsive 
   // =========================
 
   d3.select(window).on("resize", resize);
